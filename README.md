@@ -1,96 +1,159 @@
-# Vyuha APM
+# Vyuha APM — Meta Repository
 
-**Vyuha APM** is a next-generation, AI-driven observability platform designed for real-time system monitoring, anomaly detection, and intelligent insights.  
-It combines lightweight agents, a scalable backend, and predictive analytics to deliver complete visibility across your infrastructure.
+**Vyuha APM** is a personal, hobby, open-source observability platform created purely for **learning**, **experimentation**, and **showcasing skills**.  
+This repository acts as the **meta-repo** for the entire Vyuha ecosystem and contains the architecture, vision, roadmap, and links to all component repositories.
 
----
-
-## 🏗️ System Architecture
-
-- **Host Agent (Rust / Java)** — Collects system-level and JVM metrics from host machines and containers.  
-- **Metrics Server (Spring Boot)** — Aggregates, stores, and exposes APIs for metrics ingestion and querying.  
-- **AI Engine (Python)** — Performs anomaly detection, trend analysis, and predictive insights on collected data.  
-- **Dashboard (Web)** — Provides real-time visualization, health insights, and alert analytics for monitored systems.
+> ⚠️ **Important:** Many modules in this project are **not yet developed** or are **work-in-progress**.  
+> This is a personal learning project — **not intended for production use**.
 
 ---
 
-## ⚙️ Tech Stack
+## 🚀 About the Project
 
-| Layer | Technologies |
-|-------|---------------|
-| **Agents** | Rust 1.80+, Java 21 |
-| **Server** | Spring Boot 3.5+, Gradle |
-| **AI Engine** | Python 3.12, Scikit-learn / PyTorch |
-| **Dashboard** | React / Vue, TypeScript |
-| **Storage** | PostgreSQL / MySQL |
-| **Communication** | REST APIs, HTTP / gRPC (planned) |
+Vyuha APM explores how modern observability platforms work — metrics collection, agents, APIs, storage, AI-based anomaly detection, and dashboards.
 
----
+It is a **poly-repo system** where each component (agent, server, AI engine, dashboard) lives in its own repository.
 
-## 🌟 Key Features
+Anyone is free to explore, study, modify, or use the project.  
+However:
 
-- 🧩 **Modular Microservice Architecture** — Independent agents and services for easy scalability.  
-- ⚡ **Real-time Metrics Collection** — CPU, memory, disk, and network performance tracking.  
-- 🧠 **AI-Powered Insights** — Detects anomalies and predicts performance degradation.  
-- ☁️ **Cloud-Ready & Lightweight** — Built for containerized and distributed environments.  
-- 📊 **Interactive Dashboard** — Real-time visualization of health and performance.  
-- 🔌 **Extensible Design** — Easy integration with third-party APMs and tools.
+> ⚠️ **No warranties. No guarantees. No responsibility for misuse.**  
+> This is a **personal educational project**, not a commercial product.
 
 ---
 
-## 🚀 Getting Started
+## 📦 Repositories (Poly-Repo Structure)
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/nageshdevadig-a/vyuha-apm.git
-cd vyuha-apm
+These repositories represent the major components of Vyuha APM:
+
+### **🖥 Agents**
+- **vyuha-host-agent** — Rust system metrics collector *(planned / under development)*  
+- **vyuha-jvm-agent** — Java `-javaagent` for JVM metrics *(planned / under development)*  
+
+### **⚙️ Backend Services**
+- **vyuha-metrics-server** — Spring Boot metrics ingestion & API server *(WIP)*  
+- **vyuha-ai-engine** — Python-based anomaly detection engine *(planned)*  
+
+### **📊 Frontend**
+- **vyuha-dashboard** — Web dashboard for visualization *(future component)*  
+
+### **📚 This Repository**
+- **vyuha-apm** — Central documentation, architecture, design notes, and cross-repo structure.
+
+> Many components are **not yet implemented**. This meta repository will be updated as development progresses.
+
+---
+
+## 🏗️ System Architecture (Conceptual)
+
+```
+[Host Systems]
+   |          \
+   |           \
+[Host Agent]  [JVM Agent]   (planned)
+        \         /
+         \       /
+      [Metrics Server]  (WIP)
+             |
+             v
+      [AI Engine]  (future)
+             |
+             v
+        [Dashboard]  (future)
 ```
 
-### 2. Run Locally
-- Start **Metrics Server**:  
-  ```bash
-  cd server
-  ./gradlew bootRun
-  ```
-- Launch **Host Agent** or **JVM Agent**:  
-  ```bash
-  cargo run --bin vyuha-host-agent
-  ```
-- Start **AI Engine**:
-  ```bash
-  python ai_engine/main.py
-  ```
-- Open the **Dashboard** in your browser.
+The architecture is modular so each component can be built, deployed, and improved independently.
 
 ---
 
-## 🧩 Planned Enhancements
+## 🔧 Tech Stack (Planned)
 
-- Distributed tracing and log ingestion  
-- gRPC-based high-performance data pipeline  
-- Agent-side caching and batching  
-- Dynamic rule-based alerting  
-- Container-level metrics collection  
-
----
-
-## 🪪 License
-
-This project is released under the **MIT License**.  
-You are free to use, modify, and distribute it under open-source terms.  
-Please give credit if you use it in your own work.
+| Component | Technology |
+|----------|------------|
+| Host Agent | Rust 1.90 |
+| JVM Agent | Java 21 |
+| Metrics Server | Spring Boot 3.5.x |
+| AI Engine | Python 3.12 |
+| Dashboard | React / Vue |
+| Storage | MySQL / PostgreSQL |
+| Communication | REST / HTTP |
 
 ---
 
-## 🙏 Disclaimer
+## 🛠 Why This Project Exists
 
-Vyuha APM is a personal learning and research project aimed at exploring observability, APM design, and intelligent system monitoring.  
-It is **not affiliated with any organization** and should be used for educational or experimental purposes only.
+This project is designed for:
+
+- 📘 **Learning modern observability concepts**  
+- 🧠 **Understanding how APM tools like New Relic / Datadog work internally**  
+- 💼 **Showcasing skills for interviews and resumes**  
+- 🧪 **Experimenting with Rust, Java, Python, ML, and distributed system design**
+
+Not intended for:
+- Commercial deployment  
+- Handling production workloads  
+- Providing service guarantees  
 
 ---
 
-## 💡 Author
+## 🧩 Development Status
+
+| Component | Status |
+|----------|--------|
+| Host Agent (Rust) | **Not yet developed** |
+| JVM Agent (Java) | **Not yet developed** |
+| Metrics Server | **In progress** |
+| AI Engine | **Planned** |
+| Dashboard | **Planned** |
+
+This repo will be updated as modules become available.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome for learning and experimentation.
+
+- Open issues or discussions in this repo or in the corresponding service repo.
+- Not all modules exist yet — contributions may help bootstrap them.
+- Since this is a personal learning project, contributions are optional and informal.
+
+---
+
+## ⚠️ Disclaimer
+
+- This is a **personal hobby project**.  
+- You may use or modify it freely.  
+- The author takes **no responsibility** for outcomes, issues, misuse, or damages.  
+- No guarantees are made regarding correctness, security, performance, or reliability.  
+- Not affiliated with any company.
+
+---
+
+## 📜 License
+
+Vyuha APM is licensed under the **MIT License**.  
+See the full license included below.
+
+---
+
+## 📎 Component Repositories (Links)
+
+Replace `<your-username>` with your actual GitHub username.
+
+| Component | Repository |
+|----------|------------|
+| Meta Repo | https://github.com/nageshdevadig-a/vyuha-apm |
+| Host Agent | https://github.com/nageshdevadig-a/vyuha-host-agent |
+| JVM Agent | https://github.com/nageshdevadig-a/vyuha-jvm-agent |
+| Metrics Server | https://github.com/nageshdevadig-a/vyuha-metrics-server |
+| AI Engine | https://github.com/nageshdevadig-a/vyuha-ai-engine |
+| Dashboard | https://github.com/nageshdevadig-a/vyuha-dashboard |
+
+---
+
+## ✉️ Author
 
 **Nagesh Devadiga**  
-Aspiring Observability & APM Engineer | Builder of intelligent monitoring tools  
-[GitHub](https://github.com/nageshdevadig-a)
+For questions, open an issue in this repo.
+
