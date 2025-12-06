@@ -6,8 +6,6 @@ This repository acts as the **meta-repo** for the entire Vyuha ecosystem and con
 > ⚠️ **Important:** Many modules in this project are **not yet developed** or are **work-in-progress**.  
 > This is a personal learning project — **not intended for production use**.
 
-To learn about the full Vyuha APM project architecture, goals, and all related modules, visit the meta repository: https://github.com/nageshdevadig-a/vyuha-apm
-
 ---
 
 ## 🚀 About the Project
